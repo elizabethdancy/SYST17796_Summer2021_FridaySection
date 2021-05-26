@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ca.sheridancollege.week3.softwarefundamentals.ice1;
+package ca.sheridancollege.week2.softwarefundamentals.ice1;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
