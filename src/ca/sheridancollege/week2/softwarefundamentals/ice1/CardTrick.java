@@ -1,9 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Oluwatoyosi Kuponiyi - 991332886
  */
 package ca.sheridancollege.week2.softwarefundamentals.ice1;
+
+import java.util.Random;
+import java.util.Scanner;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
@@ -16,18 +17,38 @@ public class CardTrick {
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
+        Random rand = new Random();
         
-        for (int i=0; i<magicHand.length; i++)
+        for (int i=0; i < magicHand.length; i++)
         {
             Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            // add c to your magicHand
+            int value = rand.nextInt(13) + 1;
+            int suit = rand.nextInt(4);
+            c.setValue(value);
+            c.setSuit(Card.SUITS[suit]);
+            magicHand[i] = c;
+        }
+        int card = 0;
+        String suit = "";
+        boolean isMagicHand = false;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a card value:");
+        card = scan.nextInt();
+        System.out.println("Enter a suit value:");
+        suit = scan.next();
+        
+        for (Card mgH : magicHand) {
+            if (mgH.getValue() == card && mgH.getSuit().equalsIgnoreCase(suit)) {
+                isMagicHand = true;
+                break;
+            }
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+        if (isMagicHand) {
+            System.out.println("Your card is in the magic hand!");
+        } else {
+            System.out.println("Your card is not in the magic hand!");
+        }
     }
     
 }
