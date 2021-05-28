@@ -14,6 +14,8 @@ package ca.sheridancollege.week2.softwarefundamentals.ice1;
  * add your name as a modifier.
  * @author dancye
  */
+
+// Edgar Vellojin - 991621681
 public class Card {
 
    private String suit; //clubs, spades, diamonds, hearts
@@ -46,6 +48,11 @@ public class Card {
      */
     public void setValue(int value) {
         this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return "Card{" + "suit=" + suit + ", value=" + value + '}';
     }
    
    
