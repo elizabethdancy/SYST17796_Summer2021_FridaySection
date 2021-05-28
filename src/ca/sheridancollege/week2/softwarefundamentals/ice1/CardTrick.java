@@ -33,18 +33,18 @@ public class CardTrick {
         
         //insert code to ask the user for Card value and suit, create their card
         Scanner input = new Scanner(System.in);
-        Card g = new Card();
+        Card luckyCard = new Card();
         System.out.println("Pick a card value: 1-13");
         int gValue = input.nextInt();
-        g.setValue(gValue);
+        luckyCard.setValue(gValue);
         System.out.println("Pick a suit!: 1(Hearts), 2(Diamonds), 3(Spades), 4(Clubs)");
         int gSuit = input.nextInt();
-        g.setSuit(Card.SUITS[gSuit-1]);
+        luckyCard.setSuit(Card.SUITS[gSuit-1]);
         
         // and search magicHand here
         boolean match = true;
         for(int i=0; i<magicHand.length; i++){
-            if(g.getValue() == magicHand[i].getValue() && g.getSuit() == magicHand[i].getSuit()){
+            if(luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit() == magicHand[i].getSuit()){
                 match = true;
                 break;
             } else {
