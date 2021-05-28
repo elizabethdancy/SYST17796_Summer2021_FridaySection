@@ -33,9 +33,11 @@ public class CardTrick {
             magicHand[i] = c;
         }
 
+        /*
         for (int i = 0; i < magicHand.length; i++) {
             System.out.println(magicHand[i]);
         }
+        */
 
         Card pCard = new Card();
 
