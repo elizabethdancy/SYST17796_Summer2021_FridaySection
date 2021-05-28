@@ -52,6 +52,7 @@ public class CardTrick {
 	Card luckyCard = new Card();
         luckyCard.setSuit("Hearts");
 	luckyCard.setValue(7);
+        System.out.println("Lucky Card: " + luckyCard.getValue() + " of " +  luckyCard.getSuit());
         
         boolean cardInside = false;
         
@@ -62,9 +63,9 @@ public class CardTrick {
         }
         
         if (cardInside == true)
-            System.out.println("Your Card: " + cardNum + " of " +  suit + " is IN the magicHand, Congratulations !!!");
+            System.out.println("You Win, the luckyCard: " + luckyCard.getValue() + " of " + luckyCard.getSuit() + " is IN the magicHand, Congratulations !!!");
         else
-            System.out.println("Your Card: " + cardNum + " of " +  suit + " is NOT IN the magicHand, Try again ...");
+            System.out.println("You Lose, the luckyCard: " + luckyCard.getValue() + " of " + luckyCard.getSuit() + " is NOT IN the magicHand, Try again ...");
         
     }
     
