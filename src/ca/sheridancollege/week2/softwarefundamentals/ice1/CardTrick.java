@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ca.sheridancollege.week2.softwarefundamentals.ice1;
 import java.util.Scanner;
 /**
@@ -27,6 +22,7 @@ public class CardTrick
         boolean acceptableInput = true;
         boolean guessWin = false;
 
+        // Create Magic Hand of 7 cards; populate cards with values
         Card[] magicHand = new Card[7];
 
         for (int i = 0; i < magicHand.length; i++) {
@@ -35,8 +31,13 @@ public class CardTrick
             c.setSuit(Card.SUITS[(int) (Math.random() * 4)]);
             magicHand[i] = c;
         }
+        
+        // Add hard-coded "Lucky Card"; 7 of Spades
+        Card luckyCard = new Card;
+        luckyCard.setSuit("Spades");
+        luckyCard.setValue(7);
 
-        //insert code to ask the user for Card value and suit, create their card
+        //insert code to ask the user for Card value and suit, create their card        
         System.out.println("Guess a card, any card! (from a standard deck)");
         do {
             acceptableInput = true; // Reset for multiple attempts
@@ -101,7 +102,7 @@ public class CardTrick
             }
         }
         while (acceptableInput == false);
-
+        
         // and search magicHand here
         for (int i = 0; i < magicHand.length; i++) {
             if (guessedValue == magicHand[i].getValue()
