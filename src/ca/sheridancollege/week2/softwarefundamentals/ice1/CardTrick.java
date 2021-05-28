@@ -19,9 +19,15 @@ public class CardTrick {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String pSuit = "";
-        int pValue = 0, x = 0;
+        int pValue = 0, x = 0, counter = 0;
         int[] result = new int[7];
         Card[] magicHand = new Card[7];
+
+        //Lucky Card!
+        Card luckyCard = new Card();
+        luckyCard.setValue(1);
+        luckyCard.setSuit("Spades");
+     
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
@@ -38,7 +44,7 @@ public class CardTrick {
             System.out.println(magicHand[i]);
         }
         */
-
+        /*
         Card pCard = new Card();
 
         //insert code to ask the user for Card value and suit, create their card
@@ -68,26 +74,32 @@ public class CardTrick {
         }
         pCard.setSuit(pSuit);
         pCard.setValue(pValue);
-
+         */
         // and search magicHand here
         for (int i = 0; i < magicHand.length; i++) {
-            
+
             //Win
-            if(pCard.toString().equals(magicHand[i].toString()))
+            if (luckyCard.toString().equals(magicHand[i].toString())) {
                 result[i] = 1;
-            
-            //Loss
-            else
+            } //Loss
+            else {
                 result[i] = 0;
+            }
         }
-        
+
         //Then report the result here
-       
         for (int i = 0; i < magicHand.length; i++) {
-            //Results Win
-            if (result[i] == 1)
-                System.out.println("You have found a match! Your " + pCard.toString() + " matched with Magic" + magicHand[i].toString());
+            if (result[i] == 1) {
+                counter++;
+            }
         }
+
+        if (counter > 0) {
+            System.out.println("You have WON!");
+        } else {
+            System.out.println("You Have Lost!");
+        }
+
     }
 
 }
