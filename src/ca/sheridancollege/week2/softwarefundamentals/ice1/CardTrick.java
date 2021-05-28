@@ -31,78 +31,85 @@ public class CardTrick
             c.setSuit(Card.SUITS[(int) (Math.random() * 4)]);
             magicHand[i] = c;
         }
-        
+
         // Add hard-coded "Lucky Card"; 7 of Spades
-        Card luckyCard = new Card;
+        Card luckyCard = new Card();
         luckyCard.setSuit("Spades");
         luckyCard.setValue(7);
 
-        //insert code to ask the user for Card value and suit, create their card        
-        System.out.println("Guess a card, any card! (from a standard deck)");
-        do {
-            acceptableInput = true; // Reset for multiple attempts
-            System.out.println("Guess card value (1 ~ 13); [A]ce = 1, "
-                + "[J]ack = 11, [Q]ueen = 12, [K]ing = 13.");
-            userGuess = inKeys.next();
-            inKeys.nextLine(); // purge input buffer
+        /* COMMENTING OUT USER INPUT SECTION IN FAVOUR OF HARD CODED LUCKY CARD
+         * //insert code to ask the user for Card value and suit, create their
+         * card
+         * System.out.println("Guess a card, any card! (from a standard deck)");
+         * do {
+         * acceptableInput = true; // Reset for multiple attempts
+         * System.out.println("Guess card value (1 ~ 13); [A]ce = 1, "
+         * + "[J]ack = 11, [Q]ueen = 12, [K]ing = 13.");
+         * userGuess = inKeys.next();
+         * inKeys.nextLine(); // purge input buffer
+         *
+         * // check user input: If numerals; else if jack/queen/king/ace
+         * if (userGuess.matches("[1-9]") || userGuess.matches("1[0-3]")) {
+         * guessedValue = Integer.parseInt(userGuess);
+         * }
+         * else {
+         *
+         * // Allows word entry.
+         * userGuess = userGuess.toUpperCase();
+         * switch (userGuess.charAt(0)) {
+         * case 'J':
+         * guessedValue = 11;
+         * break;
+         * case 'Q':
+         * guessedValue = 12;
+         * break;
+         * case 'K':
+         * guessedValue = 13;
+         * break;
+         * case 'A':
+         * guessedValue = 1;
+         * break;
+         * default:
+         * acceptableInput = false;
+         * }
+         * }
+         * }
+         * while (acceptableInput == false);
+         *
+         * // Request suit selection
+         * do {
+         * acceptableInput = true; // Reset for multiple attempts
+         * System.out.println("Enter a suit. ([H]earts, [D]iamonds, [C]lubs, "
+         * + "or [S]pades)");
+         * userGuess = inKeys.next().toUpperCase();
+         * inKeys.nextLine(); // purge input buffer
+         *
+         * // accept any input beginning with H, D, C, or S
+         * switch (userGuess.charAt(0)) {
+         * case 'H':
+         * guessedSuit = "Hearts";
+         * break;
+         * case 'D':
+         * guessedSuit = "Diamonds";
+         * break;
+         * case 'S':
+         * guessedSuit = "Spades";
+         * break;
+         * case 'C':
+         * guessedSuit = "Clubs";
+         * break;
+         * default:
+         * acceptableInput = false;
+         * System.out.println("Please enter only an acceptable suit.");
+         * }
+         * }
+         * while (acceptableInput == false);
+         * */
 
-            // check user input: If numerals; else if jack/queen/king/ace
-            if (userGuess.matches("[1-9]") || userGuess.matches("1[0-3]")) {
-                guessedValue = Integer.parseInt(userGuess);
-            }
-            else {
+        // manually set guessedValue and guessedSuit variables to luckyCard info
+        guessedValue = luckyCard.getValue();
+        guessedSuit = luckyCard.getSuit();
 
-                // Allows word entry.
-                userGuess = userGuess.toUpperCase();
-                switch (userGuess.charAt(0)) {
-                    case 'J':
-                        guessedValue = 11;
-                        break;
-                    case 'Q':
-                        guessedValue = 12;
-                        break;
-                    case 'K':
-                        guessedValue = 13;
-                        break;
-                    case 'A':
-                        guessedValue = 1;
-                        break;
-                    default:
-                        acceptableInput = false;
-                }
-            }
-        }
-        while (acceptableInput == false);
-
-        // Request suit selection
-        do {
-            acceptableInput = true; // Reset for multiple attempts
-            System.out.println("Enter a suit. ([H]earts, [D]iamonds, [C]lubs, "
-                + "or [S]pades)");
-            userGuess = inKeys.next().toUpperCase();
-            inKeys.nextLine(); // purge input buffer
-
-            // accept any input beginning with H, D, C, or S 
-            switch (userGuess.charAt(0)) {
-                case 'H':
-                    guessedSuit = "Hearts";
-                    break;
-                case 'D':
-                    guessedSuit = "Diamonds";
-                    break;
-                case 'S':
-                    guessedSuit = "Spades";
-                    break;
-                case 'C':
-                    guessedSuit = "Clubs";
-                    break;
-                default:
-                    acceptableInput = false;
-                    System.out.println("Please enter only an acceptable suit.");
-            }
-        }
-        while (acceptableInput == false);
-        
         // and search magicHand here
         for (int i = 0; i < magicHand.length; i++) {
             if (guessedValue == magicHand[i].getValue()
