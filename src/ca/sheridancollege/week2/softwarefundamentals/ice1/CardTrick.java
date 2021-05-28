@@ -31,11 +31,6 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
-        for (Card s: magicHand){
-            System.out.println(s.getValue());
-            System.out.println(s.getSuit());
-        }
-        
         //insert code to ask the user for Card value and suit, create their card
         Scanner input = new Scanner(System.in);
         Card g = new Card();
