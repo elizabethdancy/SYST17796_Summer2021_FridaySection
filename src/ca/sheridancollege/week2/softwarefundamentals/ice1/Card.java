@@ -12,7 +12,9 @@ package ca.sheridancollege.week2.softwarefundamentals.ice1;
  * There are 52 cards in a deck, no jokers.
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
- * @author dancye
+ * @author BingChen Sun
+ * Student Number 991622161
+ * @modifier dancye
  */
 public class Card {
 
