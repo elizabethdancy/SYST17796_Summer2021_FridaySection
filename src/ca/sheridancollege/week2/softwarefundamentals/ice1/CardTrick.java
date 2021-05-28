@@ -28,6 +28,11 @@ public class CardTrick {
             c.setSuit(Card.SUITS[suit]);
             magicHand[i] = c;
         }
+        
+        Card luckyCard = new Card();
+        luckyCard.setValue(5);
+        luckyCard.setSuit("Hearts");
+        
         int card = 0;
         String suit = "";
         boolean isMagicHand = false;
