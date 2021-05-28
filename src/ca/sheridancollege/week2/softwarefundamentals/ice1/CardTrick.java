@@ -33,17 +33,10 @@ public class CardTrick {
         luckyCard.setValue(5);
         luckyCard.setSuit("Hearts");
         
-        int card = 0;
-        String suit = "";
         boolean isMagicHand = false;
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter a card value:");
-        card = scan.nextInt();
-        System.out.println("Enter a suit value:");
-        suit = scan.next();
         
         for (Card mgH : magicHand) {
-            if (mgH.getValue() == card && mgH.getSuit().equalsIgnoreCase(suit)) {
+            if (mgH.getValue() == luckyCard.getValue() && mgH.getSuit().equalsIgnoreCase(luckyCard.getSuit())) {
                 isMagicHand = true;
                 break;
             }
