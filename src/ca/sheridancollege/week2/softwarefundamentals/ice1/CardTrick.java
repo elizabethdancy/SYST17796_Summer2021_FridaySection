@@ -51,6 +51,7 @@ public class CardTrick {
             System.out.println("Your card is in the magic hand, YOU WON !!!");
         } else {
             System.out.println("Your card is not in the magic hand, YOU LOSE, Better Luck Next Time!");
+
         }
     }   
 }
