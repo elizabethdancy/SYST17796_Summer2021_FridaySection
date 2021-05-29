@@ -30,21 +30,21 @@ public class CardTrick {
         }
         
         //insert code to ask the user for Card value and suit, create their card
-         
-        Card deck = new Card();
+        
+        Card luckyCard = new Card;
         System.out.println("Enter one card between 1 and 13: ");
         int userValue = input.nextInt();
-        deck.setValue(userValue);
-        System.out.println("Enter one suit- 1[Hearts], 2[Diamonds], 3[Spade], 4[Clubs]");
+        luckyCard.setValue(userValue);
+        System.out.println("Enter one suit- 1[Hearts], 2[Clubs], 3[Diamonds], 4[Spades]");
         int luckSuits = input.nextInt();
         
-        deck.setSuit(Card.SUITS[ luckSuits-1]);
+        luckyCard.setSuit(Card.SUITS[ luckSuits-1]);
         
         // and search magicHand here
         
         boolean available = true;
-        for (Card magicHand1 : magicHand) {
-            if (deck.getValue() == magicHand1.getValue() && deck.getSuit().equals(magicHand1.getSuit())) {
+        for (Card magicHand1 : magicHand) { 
+            if (luckyCard.getValue() == magicHand1.getValue() && luckyCard.getSuit().equals(magicHand1.getSuit())) {
                 available = true;
                 break;
             } else {
