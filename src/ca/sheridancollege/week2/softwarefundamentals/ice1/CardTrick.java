@@ -30,6 +30,7 @@ public class CardTrick
       }
 
 
+      
       int count = 0;
       Card luckyCard = new Card();
       luckyCard.setValue(3);
