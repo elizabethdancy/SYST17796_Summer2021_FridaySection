@@ -30,7 +30,7 @@ public class CardTrick {
             System.out.println(c.getSuit());
         }
         
-        int x=0;
+        int x=0,y=0;
         Card UserInput=new Card();
         
         System.out.println("Enter a card(1-13): ");
@@ -56,6 +56,17 @@ public class CardTrick {
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
+        
+        Card luckyCard=new Card(1,"Hearts");for (int i=0; i<magicHand.length; i++)
+        {
+            if(magicHand[i].getValue()==UserInput.getValue() && magicHand[i].getSuit()==UserInput.getSuit()){
+                System.out.println("Array contains the card you entered!!");
+                y=1;
+            }
+        }
+        if(y==0){
+            System.out.println("Array does not contain the card you entered!!");
+        }
     }
     
 }
