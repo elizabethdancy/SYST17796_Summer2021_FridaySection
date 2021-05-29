@@ -5,7 +5,7 @@
  * and open the template in the editor.
  */
 package ca.sheridancollege.week2.softwarefundamentals.ice1;
-import java.util.Scanner;
+
 import java.util.Random;
 
 /**
@@ -22,18 +22,19 @@ public class CardTrick {
         Card[] magicHand = new Card[7];
         
         Card luckyCard = new Card();
-        luckyCard.setValue(12);
-        luckyCard.setSuit(Hearts);
+        luckyCard.setValue(7);
+        luckyCard.setSuit("Spades");
         
         Random random = new Random();
+        /**
         Scanner input= new Scanner(System.in);
-
+        */
         for (int i=0; i<magicHand.length; i++) {
             
             Card c = new Card();
             
             //c.setValue(insert call to random number generator here)
-            c.setValue(random.nextInt(14)+1);
+            c.setValue(random.nextInt(13)+1);
             //c.setSuit(Card.SUITS[insert call to random numberbetween 0-3 here])
             c.setSuit(Card.SUITS[(random.nextInt(4))]);
             //add c to your magicHand
@@ -44,19 +45,20 @@ public class CardTrick {
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
-       
+       /**
        System.out.println("\nPick any card value from 1-13: ");
         int getValue= input.nextInt();
         
         System.out.println("Pick any card Suit");
         String getSuits = input.next(); 
-        
+        */
         for (Card magicHand1 : magicHand) {
             
-        if(getValue== magicHand1.getValue() && getSuits.equals(magicHand1.getSuit()))
-        System.out.println("It matches!");
+        if(luckyCard.getValue()== magicHand1.getValue() && luckyCard.getSuit().equals(magicHand1.getSuit()))
+        System.out.println("luckCard Matches You Win!");
         else {
-            System.out.println("Does not Match");
+            System.out.println("Does not Match, Try Again.");
+        
         }
         }
     }
