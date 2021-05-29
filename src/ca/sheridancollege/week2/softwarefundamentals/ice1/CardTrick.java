@@ -46,7 +46,7 @@ public class CardTrick {
        
         // and search magicHand here
         //Then report the result here
-        for(int i = 0; i < magicHand.length; i++){
+       /* for(int i = 0; i < magicHand.length; i++){
             if(ans == magicHand[i].getValue() && ans1.equalsIgnoreCase(magicHand[i].getSuit()))
             {
                 System.out.println("your card is in magic hand");
@@ -54,8 +54,17 @@ public class CardTrick {
             }
         }
             System.out.println("your card is not in magic hand");
-            
+            */
+            for(Card a : magicHand){
+            if(luckyCard.getValue() == a.getValue() && luckyCard.getSuit().equalsIgnoreCase(a.getSuit()))
+            {
+                System.out.println("You win!");
+                return;
+            }
+            }
+                System.out.println("You lose!");
         }
     }
+
     
 
