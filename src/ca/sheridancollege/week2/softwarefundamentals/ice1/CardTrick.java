@@ -30,11 +30,10 @@ public class CardTrick
       }
 
 
-
       int count = 0;
       Card luckyCard = new Card();
-      luckyCard.setValue(5);
-      luckyCard.setSuit("Diamonds");
+      luckyCard.setValue(3);
+      luckyCard.setSuit("Hearts");
       for (int i = 0; i < magicHand.length; i++) {
          count++;
          if (magicHand[i].getValue() == (luckyCard.getValue()) && magicHand[i].getSuit().equals(luckyCard.getSuit())) {
