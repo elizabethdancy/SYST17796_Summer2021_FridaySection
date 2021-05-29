@@ -26,8 +26,8 @@ public class CardTrick {
             c.setValue(RG.nextInt(10) + 1 );//insert call to random number generator here
             c.setSuit(Card.SUITS[RG.nextInt(3) + 0]);//c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
             magicHand[i]=c;// add c to your magicHand
-            System.out.println(c.getValue());
-            System.out.println(c.getSuit());
+            //System.out.println(c.getValue());
+            //System.out.println(c.getSuit());
         }
         
         int x=0,y=0;
@@ -57,15 +57,16 @@ public class CardTrick {
         // and search magicHand here
         //Then report the result here
         
-        Card luckyCard=new Card(1,"Hearts");for (int i=0; i<magicHand.length; i++)
+        Card luckyCard=new Card("Hearts",1);
+        for (int i=0; i<magicHand.length; i++)
         {
-            if(magicHand[i].getValue()==UserInput.getValue() && magicHand[i].getSuit()==UserInput.getSuit()){
-                System.out.println("Array contains the card you entered!!");
+            if(magicHand[i].getValue()==luckyCard.getValue() && magicHand[i].getSuit()==luckyCard.getSuit()){
+                System.out.println("A match!! You have won!!");
                 y=1;
             }
         }
         if(y==0){
-            System.out.println("Array does not contain the card you entered!!");
+            System.out.println("Hard luck.. Better luck next time!!");
         }
     }
     
