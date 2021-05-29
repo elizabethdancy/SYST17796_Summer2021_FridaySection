@@ -3,31 +3,60 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ca.sheridancollege.week2.softwarefundamentals.ice1;
-
+ package ca.sheridancollege.week2.softwarefundamentals.ice1;
+import java.util.Scanner;
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
  */
+ // Saravdeep Singh
+ //Student ID- 991631189
+
 public class CardTrick {
     
     public static void main(String[] args)
-    {
-        Card[] magicHand = new Card[7] ;
+    {   
+        Scanner input = new Scanner(System.in);
+        Card[] magicHand = new Card[7];
         
-        for (int i=0; i<magicHand.length; i++ )
+        for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            // add c to your magicHand
+            c.setValue((int)Math.floor(Math.random()* 13)+1);
+            c.setSuit(Card.SUITS[(int)Math.floor(Math.random()* 4)+0]);
+            magicHand[i]=c;
         }
         
         //insert code to ask the user for Card value and suit, create their card
+         
+        Card deck = new Card();
+        System.out.println("Enter one card between 1 and 13: ");
+        int userValue = input.nextInt();
+        deck.setValue(userValue);
+        System.out.println("Enter one suit- 1[Hearts], 2[Diamonds], 3[Spade], 4[Clubs]");
+        int luckSuits = input.nextInt();
+        
+        deck.setSuit(Card.SUITS[ luckSuits-1]);
+        
         // and search magicHand here
+        
+        boolean available = true;
+        for (Card magicHand1 : magicHand) {
+            if (deck.getValue() == magicHand1.getValue() && deck.getSuit().equals(magicHand1.getSuit())) {
+                available = true;
+                break;
+            } else {
+                available= false;
+            }
+        }
+        
         //Then report the result here
+        if(available){
+            System.out.println("Your choosen card is in magic hand!!!!");          
+        } else {
+            System.out.println("Your choosen card is not there in magic hand!!!!");
+        }
     }
-    
-}
+} 
