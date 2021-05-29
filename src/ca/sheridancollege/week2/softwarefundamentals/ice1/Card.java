@@ -48,6 +48,13 @@ public class Card {
         this.value = value;
     }
    
-   
+    public int randomSuit(){
+          int value= (int)(Math.random()*4)+0;
+          return value;
+    }
+    public int randomValue(){
+          int value= (int)(Math.random()*13)+1;   
+          return value;
+}
     
 }
