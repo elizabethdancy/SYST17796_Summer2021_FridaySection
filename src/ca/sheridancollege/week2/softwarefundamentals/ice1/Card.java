@@ -14,6 +14,12 @@ package ca.sheridancollege.week2.softwarefundamentals.ice1;
  * add your name as a modifier.
  * @author dancye
  */
+
+/*
+Name: Akashdeep Patel
+StudentNo.: 991619545
+ */
+
 public class Card {
 
    private String suit; //clubs, spades, diamonds, hearts
