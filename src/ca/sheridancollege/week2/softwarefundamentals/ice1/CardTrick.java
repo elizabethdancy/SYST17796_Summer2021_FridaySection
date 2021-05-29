@@ -5,7 +5,6 @@
  */
 package ca.sheridancollege.week2.softwarefundamentals.ice1;
 //import java.util.Random;
-import java.util.Scanner;
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and then asks the user to pick a card and searches the array of cards
@@ -31,19 +30,16 @@ public class CardTrick
       }
 
 
-      Scanner input = new Scanner(System.in);
-      int count = 0;
-      System.out.println("Pick any Card value from 1-13: ");
-      int usrValue = input.nextInt();
-      input.nextLine();
-      System.out.println("Pick a Suit from [Hearts, Diamonds, Spades, Clubs]: ");
-      String usrHand = input.nextLine();
 
+      int count = 0;
+      Card luckyCard = new Card();
+      luckyCard.setValue(5);
+      luckyCard.setSuit("Diamonds");
       for (int i = 0; i < magicHand.length; i++) {
          count++;
-         if (magicHand[i].getValue() == (usrValue) && magicHand[i].getSuit().equals(usrHand)) {
+         if (magicHand[i].getValue() == (luckyCard.getValue()) && magicHand[i].getSuit().equals(luckyCard.getSuit())) {
 
-            System.out.println("Congrats! Your card " + magicHand[i].getValue() + " of " + magicHand[i].getSuit() + " is in the Magic Hand.");
+            System.out.println("Congrats! Your card " + luckyCard.getValue() + " of " + luckyCard.getSuit() + " is in the Magic Hand.");
 
             break;
          }
@@ -51,7 +47,7 @@ public class CardTrick
 
             //else {
             //  System.out.println(usrHand);
-            System.out.println("Sorry. Your Card " + usrValue + " of " + usrHand + " is not in the Magic Hand.");
+            System.out.println("Sorry. Your Card " + luckyCard.getValue() + " of " + luckyCard.getSuit() + " is not in the Magic Hand.");
             //break;
          }
 
