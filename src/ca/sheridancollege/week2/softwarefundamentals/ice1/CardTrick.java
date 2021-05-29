@@ -36,7 +36,7 @@ public class CardTrick
       System.out.println("Pick any Card value from 1-13: ");
       int usrValue = input.nextInt();
       input.nextLine();
-      System.out.println("Pick a Suit from [Hearts, Diamonds, Spades, Clubs: ");
+      System.out.println("Pick a Suit from [Hearts, Diamonds, Spades, Clubs]: ");
       String usrHand = input.nextLine();
 
       for (int i = 0; i < magicHand.length; i++) {
