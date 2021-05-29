@@ -23,6 +23,15 @@ public class Card {
     /**
      * @return the suit
      */
+   
+    public Card() {
+    }
+
+    public Card(String suit, int value) {
+        this.suit = suit;
+        this.value = value;
+    }
+
     public String getSuit() {
         return suit;
     }
