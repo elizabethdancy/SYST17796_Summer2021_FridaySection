@@ -33,7 +33,7 @@ public class CardTrick {
         
          Card card = new Card();
          card.setValue(5);
-         card.setSuit(luckyCard.SUITS[0]);
+         card.setSuit(card.SUITS[0]);
      String luckyCard = card.toString();
      
         // and search magicHand here
@@ -47,7 +47,7 @@ public class CardTrick {
        
         //Then report the result here
     if(present)
-         System.out.println("Yay!! Lucky cardis in the magic hand");
+         System.out.println("Yay!! Lucky card is in the magic hand");
     else
         System.out.println("Oops!! Lucky card is not in the magic hand");
 }
