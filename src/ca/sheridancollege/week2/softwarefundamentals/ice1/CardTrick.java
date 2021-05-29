@@ -29,15 +29,17 @@ public class CardTrick {
             magicHand[i] = c ;  // add c to your magicHand         
         }
        
-        //insert code to ask the user for Card value and suit, create their card
-        System.out.println("Guess the card");
-        Scanner sc = new Scanner(System.in);
-        String userCard = sc.nextLine();
+        //insert code to  create the lucky card
         
+         Card card = new Card();
+         card.setValue(5);
+         card.setSuit(luckyCard.SUITS[0]);
+     String luckyCard = card.toString();
+     
         // and search magicHand here
         boolean present= false;
       for(int i =0; i<magicHand.length; i++){
-          if( userCard.equalsIgnoreCase(magicHand[i].toString())){
+          if( luckyCard.equalsIgnoreCase(magicHand[i].toString())){
               present = true;             
           }          
          
@@ -45,8 +47,8 @@ public class CardTrick {
        
         //Then report the result here
     if(present)
-         System.out.println("Yay!! Your card is in the magic hand");
+         System.out.println("Yay!! Lucky cardis in the magic hand");
     else
-        System.out.println("Oops!! Your card is not in the magic hand");
+        System.out.println("Oops!! Lucky card is not in the magic hand");
 }
 }
