@@ -52,6 +52,10 @@ public class CardTrick {
         }
        
         //Then report the result here
-        
+        if(match){
+            System.out.println("BRAVO!!! YOU WON");          
+        } else {
+            System.out.println("GOOD LUCK FOR NEXT TIME ");
+        }
     
 }
