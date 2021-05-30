@@ -33,10 +33,10 @@ public class CardTrick {
         
         //insert code to ask the user for Card value and suit, create their card
         Card luckyCard = new Card();
-        System.out.println("Choose a number of cards between 1 to 13:  ");
+        System.out.print("Choose a number of cards between 1 to 13:  ");
         int cardValue = sc.nextInt();
         luckyCard.setValue(cardValue);
-        System.out.println("Choose one suit of cards- 1(Clubs), 2(Hearts), 3(Spades), 4(Diamonds)");
+        System.out.print("Choose one suit of cards- 1(Clubs), 2(Hearts), 3(Spades), 4(Diamonds):  ");
         int cardsSuit = sc.nextInt();
         luckyCard.setSuit(Card.SUITS[ cardsSuit-1]);
 
