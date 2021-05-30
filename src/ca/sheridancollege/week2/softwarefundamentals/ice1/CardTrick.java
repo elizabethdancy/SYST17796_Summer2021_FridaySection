@@ -5,8 +5,6 @@
  */
 package ca.sheridancollege.week2.softwarefundamentals.ice1;
 
-import java.util.Scanner;
-
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and check if Lucky Card (8 of Diamond) is in the Magic Hand.
@@ -54,7 +52,7 @@ public class CardTrick {
                 
         //Then report the result here
         if (luck == true){
-            System.out.println("Lucky Card is in the Magic Hand");
+            System.out.println("Congratulations!!! Lucky Card is in the Magic Hand");
         }else{
             System.out.println("Lucky Card is not in the Magic Hand");
         }
