@@ -9,8 +9,8 @@ import java.util.Scanner;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
- * and then asks the user to pick a card and searches the array of cards
- * for the match to the user's card. To be used as starting code in ICE 1
+ * and check if Lucky Card (8 of Diamond) is in the Magic Hand.
+ * To be used as starting code in ICE 1
  * @author dancye
  * @modifier Hasini
  * @studentName 991641886
@@ -22,8 +22,6 @@ public class CardTrick {
         
         Card[] magicHand = new Card[7];
         boolean luck = false;
-        int guessValue;
-        int guessSuit;
         
         for (int i=0; i<magicHand.length; i++)
         {
@@ -40,36 +38,25 @@ public class CardTrick {
         
         //insert code to ask the user for Card value and suit, create their card
         
-        Card guess = new Card();
-        
-        Scanner scanner = new Scanner(System.in);
-        
-        do{
-            System.out.println("Pick a Card value (A number between 1 and 13 - 1 for Ace | 11 for Jack | 12  for Queen | 13 for King): ");
-            guessValue = scanner.nextInt();
-        } while (guessValue < 1 || guessValue >13 );
-        guess.setValue(guessValue);
-
-        do{
-            System.out.println("Pick a suit: 0 for Hearts | 1 for Diamonds | 2  for Spades | 3 for Clubs");
-            guessSuit = scanner.nextInt();
-        } while (guessSuit < 0 || guessSuit >3 );
-        guess.setSuit(Card.SUITS[guessSuit]);
+        Card luckyCard = new Card();
+  
+        luckyCard.setValue(8);
+        luckyCard.setSuit(Card.SUITS[1]);
                    
-        System.out.println("Your guess card: " + guess.getValue() + " of " + guess.getSuit());
+        System.out.println("Lucky Card card: " + luckyCard.getValue() + " of " + luckyCard.getSuit());
         
         // and search magicHand here
         for (int i=0; i< magicHand.length; i++){
-            if(magicHand[i].getValue()== guess.getValue() && magicHand[i].getSuit()==guess.getSuit()){
+            if(magicHand[i].getValue()== luckyCard.getValue() && magicHand[i].getSuit()==luckyCard.getSuit()){
                 luck = true;
             }
         }
                 
         //Then report the result here
         if (luck == true){
-            System.out.println("Your guess is correct");
+            System.out.println("Lucky Card is in the Magic Hand");
         }else{
-            System.out.println("Your card was not in the Magic Hand");
+            System.out.println("Lucky Card is not in the Magic Hand");
         }
         
         System.out.println("---------Magic Hand------------");
