@@ -32,10 +32,8 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
-         //Add hard coded-luckyCard
-        Card luckyCard = new Card(5, "Diamond");
         
-        //insert code to ask the user for Card value and suit, create their card
+       /* //ask the user for Card value and suit, create their card
         Scanner sc = new Scanner(System.in);
         System.out.print("Pick a card value between 1 and 13: ");
         int uValue = sc.nextInt();
@@ -43,7 +41,7 @@ public class CardTrick {
         System.out.print("Pick a suit among Hearts, Spades, Dimonds and Clubs: ");
         String uSuit = sc.nextLine();
         
-        // and search magicHand here
+        // search user picked card in magicHand
         //Then report the result here
         int n = 0;
         for(Card magicH:magicHand){
@@ -55,6 +53,23 @@ public class CardTrick {
             if (n == magicHand.length){
                 System.out.println("Fail, try again.");
             }
-        }  
+         }*/
+       
+        //Add hard coded-luckyCard
+        Card luckyCard = new Card(5, "Diamonds");
+        
+        //search luckyCard in magicHand
+        //report the search result
+        int n = 0;
+        for(Card magicH:magicHand){
+            if((magicH.getValue() == luckyCard.getValue()) && magicH.getSuit().equalsIgnoreCase(luckyCard.getSuit())){
+                System.out.println("Win!");
+            }else{
+                n++;
+            }
+            if (n == magicHand.length){
+                System.out.println("Fail, try again.");
+            }
+         } 
     }   
 }
