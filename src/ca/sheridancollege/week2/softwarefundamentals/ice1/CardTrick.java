@@ -32,6 +32,9 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
+         //Add hard coded-luckyCard
+        Card luckyCard = new Card(5, "Diamond");
+        
         //insert code to ask the user for Card value and suit, create their card
         Scanner sc = new Scanner(System.in);
         System.out.print("Pick a card value between 1 and 13: ");
