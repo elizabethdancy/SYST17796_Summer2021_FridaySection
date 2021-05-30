@@ -56,6 +56,7 @@ public class CardTrick {
             System.out.println("BRAVO!!! YOU WON");          
         } else {
             System.out.println("GOOD LUCK FOR NEXT TIME ");
-        }
+        }  
+    }
+}    
     
-}
