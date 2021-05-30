@@ -49,9 +49,9 @@ public class CardTrick {
        
         //Then report the result here
          if(match){
-          System.out.println("Your card is in the magic hand You Won !!");
+          System.out.println("You won, greatt,your card is in the magic hand !!");
         } else {
-          System.out.println("Your card is not in the magic hand,You Lose, Better Luck Next Time!");
+          System.out.println("Your card is not in the magic hand,You Lose, Try your Luck Next Time!");
          
            }
        }
