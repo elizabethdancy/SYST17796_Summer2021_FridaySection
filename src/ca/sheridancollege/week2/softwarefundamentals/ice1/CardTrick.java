@@ -31,7 +31,7 @@ public class CardTrick {
         
         //insert code to ask the user for Card value and suit, create their card
         
-        Card luckyCard = new Card;
+        Card luckyCard = new Card();
         System.out.println("Enter one card between 1 and 13: ");
         int userValue = input.nextInt();
         luckyCard.setValue(userValue);
