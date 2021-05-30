@@ -31,7 +31,7 @@ public class CardTrick {
         
         //insert code to ask the user for Card value and suit, create their card
         
-        Card luckyCard = new Card;
+        Card luckyCard = new Card();
         System.out.println("Enter one card between 1 and 13: ");
         int userValue = input.nextInt();
         luckyCard.setValue(userValue);
@@ -54,9 +54,9 @@ public class CardTrick {
         
         //Then report the result here
         if(available){
-            System.out.println("Your choosen card is in magic hand!!!!");          
+            System.out.println("YOU WON, Congratulations!!!!");          
         } else {
-            System.out.println("Your choosen card is not there in magic hand!!!!");
+            System.out.println("YOU LOST, Try Again!!!! ");
         }
     }
 } 
