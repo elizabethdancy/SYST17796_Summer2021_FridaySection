@@ -54,9 +54,9 @@ public class CardTrick {
         
         //Then report the result here
         if(available){
-            System.out.println("YOU WON, Congratulations!!!!");          
+            System.out.println("YOU WON , Congratulations!!!!");          
         } else {
-            System.out.println("YOU LOST, Try Again!!!! ");
+            System.out.println("YOU LOST , Try Again!!!! ");
         }
     }
 } 
