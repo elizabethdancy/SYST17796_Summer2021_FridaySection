@@ -40,7 +40,7 @@ public class CardTrick {
         int cardsSuit = sc.nextInt();
         luckyCard.setSuit(Card.SUITS[ cardsSuit-1]);
 
-       // and search magicHand here
+        // and search magicHand here
        boolean match = true;
         for (int i=0; i<magicHand.length; i++){ 
             if (luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit().equals(magicHand[i].getSuit())) {
@@ -52,11 +52,6 @@ public class CardTrick {
         }
        
         //Then report the result here
-        if(match){
-            System.out.println("BRAVO!!! YOU WON");          
-        } else {
-            System.out.println("GOOD LUCK FOR NEXT TIME ");
-        }
-    }
+        
     
 }
