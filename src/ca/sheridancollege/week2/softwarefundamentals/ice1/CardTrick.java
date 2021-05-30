@@ -6,6 +6,7 @@
 package ca.sheridancollege.week2.softwarefundamentals.ice1;
 
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
@@ -20,6 +21,7 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         Random rn = new Random();
+        Scanner in = new Scanner(System.in);
         
         for (int i=0; i<magicHand.length; i++)
         {
@@ -27,15 +29,30 @@ public class CardTrick {
             //c.setValue(insert call to random number generator here)
             c.setValue(rn.nextInt(13 - 1 + 1) + 1);
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            c.setSuit(Card.SUITS[rn.nextInt(3 - 0 + 1) + 1]);
+            c.setSuit(Card.SUITS[rn.nextInt(3 - 0 + 1) + 0]);
             // add c to your magicHand
             magicHand[i] = c;
-            System.out.println(magicHand[i]);
+            System.out.println(magicHand[i].getValue() + " of "
+                    + magicHand[i].getSuit());
         }
         
         //insert code to ask the user for Card value and suit, create their card
+        Card playerCard = new Card();
+        System.out.print("Pick a card value: \n");
+        int value = in.nextInt();
+        
+        System.out.println("Pick a card suit: ");
+        String suit = in.nextLine();
+        
         // and search magicHand here
-        //Then report the result here
-    }
-    
+        for(int i=0; i<magicHand.length; i++)
+            if (playerCard.getSuit().equals(magicHand[i].getSuit()) 
+                    && playerCard.getValue() == magicHand[i].getValue()) 
+            {
+                //Then report the result here
+                System.out.println("Your card was in the Deck! Magic!");
+            } else {
+                System.out.println("your card was not in the deck");
+            }
+    } 
 }
