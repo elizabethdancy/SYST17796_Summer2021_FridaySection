@@ -12,6 +12,7 @@ import java.util.Scanner;
  * @author dancye
  * @modified by Harmanpreet Kaur
  *  Student ID- 991613179
+ *  May 30, 2021
  */
 public class CardTrick {
     
