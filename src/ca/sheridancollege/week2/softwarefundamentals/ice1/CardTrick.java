@@ -42,7 +42,7 @@ public class CardTrick {
         luckyCard.setSuit(Card.SUITS[gSuits-1]);
         
         // and search magicHand here
-        // lucky card
+        // lucky card,
         boolean match = true;
         for(int i=0; i<magicHand.length; i++){
             if(luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit() == magicHand[i].getSuit()){
