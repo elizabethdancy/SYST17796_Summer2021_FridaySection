@@ -38,7 +38,7 @@ public class CardTrick {
         luckeyCard.setSuit(Card.SUITS(csuits-1));
         boolean match = true;
         for(int i = 0; i<magicHand.length; i++)
-            if(luckyCard.getValue()== magicHand[i].getValue()&& luckeyCard.getSuit()== magicHand[i].getSuit())
+            if(luckyCard.getValue() == magicHand[i].getValue() && luckeyCard.getSuit() == magicHand[i].getSuit())
             {
                 match = true;
                 break;
@@ -51,7 +51,7 @@ public class CardTrick {
     
     if(match)
     {
-        System.out.println("You Won");
+        System.out.println("Congratulations!!You Won");
     }
     else
     {
