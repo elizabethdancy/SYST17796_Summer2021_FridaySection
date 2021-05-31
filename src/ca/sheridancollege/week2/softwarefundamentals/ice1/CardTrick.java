@@ -41,7 +41,15 @@ public class CardTrick {
         int gSuits = input.nextInt();
         luckyCard.setSuit(Card.SUITS[gSuits-1]);
         // and search magicHand here
-        
+        boolean match = true;
+        for(int i=0; i<magicHand.length; i++){
+            if(luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit() == magicHand[i].getSuit()){
+                match = true;
+                break;
+             } else {
+                match = false;
+             }
+       }   
         //Then report the result here
         if(match){
             System.out.println("Your card is in the magic hand, YOU WON !!!");
