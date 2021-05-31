@@ -28,10 +28,10 @@ public class Card {
     }
 
     /**
-     * @param suit the suit to set
+     * @param Suit the suit to set
      */
-    public void setSuit(String suit) {
-        this.suit = suit;
+    public void setSuit(String Suit) {
+        this.suit = Suit;
     }
 
     /**
