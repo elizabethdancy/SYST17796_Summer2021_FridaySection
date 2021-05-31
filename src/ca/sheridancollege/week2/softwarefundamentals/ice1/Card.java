@@ -13,6 +13,8 @@ package ca.sheridancollege.week2.softwarefundamentals.ice1;
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
  * @author dancye
+ * Manjot Kaur 991597026
+ * 30 th May,2021
  */
 public class Card {
 
@@ -20,6 +22,7 @@ public class Card {
    private int value;//1-13
 
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
+   public static int[] VALUES={1,2,3,4,5,6,7,8,9,10,11,12,13};
     /**
      * @return the suit
      */
