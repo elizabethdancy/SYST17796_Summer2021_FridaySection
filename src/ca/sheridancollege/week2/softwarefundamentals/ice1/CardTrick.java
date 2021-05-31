@@ -21,7 +21,7 @@ public class CardTrick
    { //main method start
       Card[] magicHand = new Card[7]; //stores 7 cards
       Random rndNum = new Random(); //Make sure to import java.util.Random. Create Random object to use nextInt() method
-      //Card luckyCard = new Card(); //stores the user's card choice
+      Card luckyCard = new Card(); //stores the user's card choice
       Scanner input = new Scanner(System.in); //import scanner here
 
       //load array for each magicHand[i] set the card value and suit
