@@ -45,16 +45,13 @@ public class CardTrick {
         
         
         // and search magicHand here
-        Boolean match = true;
-         match = true;
+        Boolean magicCard = true;
         for (Card magicHand1 : magicHand) {
             if (luckyCard.getValue() == magicHand1.getValue() && luckyCard.getSuit().equals(magicHand1.getSuit())) {
-                match = true;
-            } else {
-                match = false;
-            }            
+                magicCard = true;
+            }           
             //Then report the result here
-            if (match) {
+            if (magicCard) {
                 System.out.println("You have won, the card is in the magic hand");
             } else {
                 System.out.println("You have lost, the card is not in the magic hand");
