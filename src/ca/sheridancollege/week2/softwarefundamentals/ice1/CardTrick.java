@@ -42,8 +42,12 @@ public class CardTrick {
 
          Card1.setValue(ValueOfCard);
          Card1.setSuit(TypeOfSuit);
+        
+         Card LuckyCard = new Card();
+         LuckyCard.setValue(6);
+         LuckyCard.setSuit(Card.SUITS[3]);
          
-         for(int i = 0; i< magicHand.length; i++){                        //search magicHand here
+         for(int i = 0; i< magicHand.length; i++){           //search magicHand here
             if(magicHand[i].getValue() == Card1.getValue() && (magicHand[i].getSuit().equalsIgnoreCase(Card1.getSuit())))
             {
                 Value = true;
@@ -54,6 +58,21 @@ public class CardTrick {
                 System.out.println("ohh great! You are winner");
             else
                 System.out.println("oh no! You lost the game");
+        
+        
+        for(int i=0; i<magicHand.length; i++){
+                     if (magicHand[i].getValue() == LuckyCard.getValue() && magicHand[i].getSuit().equalsIgnoreCase(LuckyCard.getSuit()))
+                     {
+                         Value = true;
+                         break;
+                     }
+                 }
+
+        //display the result
+        if(Value)          
+            System.out.println("You get Lucky card");
+        else
+            System.out.println("You don't get Lucky card");
 
     }
     
