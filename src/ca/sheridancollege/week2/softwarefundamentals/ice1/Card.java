@@ -19,6 +19,10 @@ public class Card {
     private int value;//1-13
 
     public static final String[] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
+    
+    public Card() {
+        
+    }
 
     public Card(int randomSuit, int randomValue) {
         if (randomSuit == 1) {
@@ -74,7 +78,7 @@ public class Card {
     
     @Override
     public String toString() {
-        return String.format("Suit: %s\n Value: %s\n", suit, value);
+        return String.format("Suit: %s \nValue: %s\n", suit, value);
     }
 
 }
