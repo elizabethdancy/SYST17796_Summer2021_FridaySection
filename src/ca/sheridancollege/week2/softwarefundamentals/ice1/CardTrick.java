@@ -13,6 +13,7 @@ package ca.sheridancollege.week2.softwarefundamentals.ice1;
  * @modifier Karman Singh Dhadda 
  * @student number 991626993
  */
+import java.util.Scanner;
 public class CardTrick {
     
     public static void main(String[] args)
@@ -25,11 +26,30 @@ public class CardTrick {
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
             // add c to your magicHand
+            c.setValue((int)Math.floor(Math.random() * 13+1));
+             c.setSuit(Card.SUITS[(int)(Math.random()*4)]);
+            magicHand[i] = c;
         }
         
         //insert code to ask the user for Card value and suit, create their card
+        Scanner input = new Scanner(System.in);
+        Card luckyCard = new Card();
+        System.out.println("Enter a card between 1 and 13: ");
+        int gValue = input.nextInt();
+        luckyCard.setValue(gValue);
+        System.out.println("Enter a suit: 1(Hearts), 2(Diamonds), 3(Spades), 4(Clubs)");
+        int gSuits = input.nextInt();
+        luckyCard.setSuit(Card.SUITS[gSuits-1]);
         // and search magicHand here
+        
         //Then report the result here
+        if(match){
+            System.out.println("Your card is in the magic hand, YOU WON !!!");
+        } 
+        else {
+            System.out.println("Your card is not in the magic hand, YOU LOSE, Better Luck Next Time!");
+
+        }
     }
     
 }
