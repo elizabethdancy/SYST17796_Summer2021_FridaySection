@@ -39,20 +39,18 @@ public class CardTrick {
         //insert code to ask the user for Card value and suit, create their card
         Card playerCard = new Card();
         System.out.print("Pick a card value: \n");
-        int value = in.nextInt();
+        playerCard.setValue(in.nextInt());
         
         System.out.println("Pick a card suit: ");
-        String suit = in.nextLine();
-        
+        playerCard.setSuit(in.next());
         // and search magicHand here
-        for(int i=0; i<magicHand.length; i++)
-            if (playerCard.getSuit().equals(magicHand[i].getSuit()) 
-                    && playerCard.getValue() == magicHand[i].getValue()) 
-            {
-                //Then report the result here
-                System.out.println("Your card was in the Deck! Magic!");
-            } else {
-                System.out.println("your card was not in the deck");
+        for(int i=0; i<magicHand.length; i++) {
+            if (playerCard.getSuit().equals(magicHand[i].getValue())){
+                if (playerCard.getValue() == magicHand[i].getValue()){
+                  System.out.println("Your card was in the Deck! Magic!");
+                }
+            } else if (i == 7){ System.out.println("your card was not in the deck");
             }
     } 
+ }
 }
