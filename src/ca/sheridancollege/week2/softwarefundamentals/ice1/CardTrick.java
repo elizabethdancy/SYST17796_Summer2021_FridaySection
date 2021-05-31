@@ -31,27 +31,26 @@ public class CardTrick {
             c.setSuit(Card.SUITS[(int)Math.floor(Math.random()*4)+0]);//c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
             c.getSuit();
             magicHand[i] = c;// add c to your magicHand
+            System.out.println(magicHand[i].getSuit() + " of " + magicHand[i].getValue());
         }
         
         Card luckyCard = new Card();
         System.out.println("Please enter the Card value between 1 & 13: ");//insert code to ask the user for Card value and suit, create their card
         int cardValue;
         cardValue = input.nextInt();
-        luckyCard.setValue(9);
+        luckyCard.setValue(5);
         
-        System.out.println("Please enter the Card suit out of these options: 1(Clubs), 2(Diamonds), 3(Spades), 4(Hearts)");
+        System.out.println("Please enter the Card suit out of these options: 0(Clubs), 1(Diamonds), 2(Spades), 3(Hearts)");
         String cardSuit = input.next();
-        luckyCard.setSuit(Card.SUITS[2]);
+        luckyCard.setSuit(Card.SUITS[1]);
         
         
         // and search magicHand here
-        Boolean magicCard = true;
+        Boolean magicCard = false;
         for (Card magicHand1 : magicHand) {
             if (luckyCard.getValue() == magicHand1.getValue() && luckyCard.getSuit().equals(magicHand1.getSuit())) {
                 magicCard = true;
-            } else {
-                magicCard = false;
-            }          
+            }      
             //Then report the result here
             if (magicCard) {
                 System.out.println("You have won, the card is in the magic hand");
