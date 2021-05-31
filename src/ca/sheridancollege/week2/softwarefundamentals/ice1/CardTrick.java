@@ -28,6 +28,33 @@ public class CardTrick {
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
+        Scanner input = new Scanner(System.in);
+        Card luckeyCard = new Card();
+        System.out.println("Enter card between 1 to 10");
+        int cvalue = input.nextInt();
+        luckeyCard.setValue(cvalue);
+        System.out.println("Enter a suit: 1(Spades), 2(Heart), 3(Clubs), 4(Diamond)");
+        int csuits = input.nextInt();
+        luckeyCard.setSuit(Card.SUITS(csuits-1));
+        boolean match = true;
+        for(int i = 0; i<magicHand.length; i++)
+            if(luckyCard.getValue()== magicHand[i].getValue()&& luckeyCard.getSuit()== magicHand[i].getSuit())
+            {
+                match = true;
+                break;
+            }
+            else {
+                match = false; 
+            }
+
     }
     
+    if(match)
+    {
+        System.out.println("You Won");
+    }
+    else
+    {
+        System.out.println("You Loose");
+    }
 }
