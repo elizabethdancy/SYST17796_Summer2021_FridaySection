@@ -32,15 +32,22 @@ public class CardTrick {
             
         }
         
+        // Hard-coded - luckyCard object from Card
+        Card luckyCard = new Card();
+        luckyCard.setValue(5);
+        luckyCard.setSuit("Diamonds");
+        
+        
+        
         //insert code to ask the user for Card value and suit, create their card
-        Scanner input = new Scanner(System.in);
-        Scanner input1 = new Scanner(System.in);// second input instance is to offset the integer input from the first user input
+       // Scanner input = new Scanner(System.in);
+       // Scanner input1 = new Scanner(System.in);// second input instance is to offset the integer input from the first user input
         
-        System.out.println("Guess a card number");
-        int guessCard = input.nextInt();
+        //System.out.println("Guess a card number");
+        int guessCard = luckyCard.getValue();
         
-        System.out.println("Guess a suit: 'Hearts', 'Diamonds', 'Clubs' or 'Spades'");
-        String guessSuit = input1.nextLine();
+       // System.out.println("Guess a suit: 'Hearts', 'Diamonds', 'Clubs' or 'Spades'");
+        String guessSuit = luckyCard.getSuit();
         
         // and search magicHand here
         boolean isCard = false;
