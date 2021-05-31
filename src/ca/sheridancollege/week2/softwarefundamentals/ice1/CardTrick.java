@@ -57,6 +57,5 @@ public class CardTrick {
                 System.out.println("You have lost, the card is not in the magic hand");
             }
         }
-    
-}
+    }
 }
