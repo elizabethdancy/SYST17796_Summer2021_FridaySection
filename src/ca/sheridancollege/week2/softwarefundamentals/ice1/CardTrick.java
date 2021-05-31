@@ -31,10 +31,16 @@ public class CardTrick {
             c.setSuit(Card.SUITS[first]); //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
               magicHand[i] = c; // add c to your magicHand
         }
+        Card luckyCard = new Card();
+
+        String finalSuit = "Spades";
+        int finalValue = 9;
+
+        luckyCard.setSuit(finalSuit);
+        luckyCard.setValue(finalValue);
         
         //insert code to ask the user for Card value and suit, create their card
-        
-        
+       
         System.out.print("Enter the card Suit: ");
         String suit1 = scanner.nextLine();
 
@@ -49,6 +55,17 @@ public class CardTrick {
                    
                 }
                    System.out.println("Sorry, your card is not in the Magic Hand !");
+                }
+       
+          for (Card index : magicHand) {
+
+                    if (suit1.equalsIgnoreCase(index.getSuit())) {
+                        if (value1 == index.getValue()) {
+                            System.out.println("Yes, you have Won !!!");
+                        }
+                    } else {
+                        System.out.println("Oops, try Again next time!!");
+                    }
                 }
     }
     
