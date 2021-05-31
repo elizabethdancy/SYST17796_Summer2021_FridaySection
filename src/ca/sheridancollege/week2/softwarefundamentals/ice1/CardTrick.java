@@ -40,7 +40,9 @@ public class CardTrick {
         System.out.println("Enter a suit: 1(Hearts), 2(Diamonds), 3(Spades), 4(Clubs)");
         int gSuits = input.nextInt();
         luckyCard.setSuit(Card.SUITS[gSuits-1]);
+        
         // and search magicHand here
+        // lucky card
         boolean match = true;
         for(int i=0; i<magicHand.length; i++){
             if(luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit() == magicHand[i].getSuit()){
