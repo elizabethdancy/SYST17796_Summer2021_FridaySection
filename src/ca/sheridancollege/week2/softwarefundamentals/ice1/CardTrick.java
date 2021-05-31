@@ -23,6 +23,10 @@ public class CardTrick {
         Random rn = new Random();
         Scanner in = new Scanner(System.in);
         
+        Card luckyCard = new Card();
+        luckyCard.setValue(3);
+        luckyCard.setSuit("Clubs");
+        
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
@@ -37,16 +41,21 @@ public class CardTrick {
         }
         
         //insert code to ask the user for Card value and suit, create their card
+        /*
         Card playerCard = new Card();
         System.out.print("Pick a card value: \n");
         playerCard.setValue(in.nextInt());
         
         System.out.println("Pick a card suit: ");
         playerCard.setSuit(in.next());
+        */
         // and search magicHand here
+        
+        
+        
         for(int i=0; i<magicHand.length; i++) {
-            if (playerCard.getSuit().compareTo(magicHand[i].getSuit()) == 0){
-                if (playerCard.getValue() == magicHand[i].getValue()){
+            if (luckyCard.getSuit().compareTo(magicHand[i].getSuit()) == 0){
+                if (luckyCard.getValue() == magicHand[i].getValue()){
                   System.out.println("Your card was in the Deck! Magic!");
                 } else {
                     System.out.println("your card was not in the deck");
