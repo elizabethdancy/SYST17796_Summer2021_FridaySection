@@ -45,11 +45,14 @@ public class CardTrick {
         playerCard.setSuit(in.next());
         // and search magicHand here
         for(int i=0; i<magicHand.length; i++) {
-            if (playerCard.getSuit().equals(magicHand[i].getValue())){
+            if (playerCard.getSuit().compareTo(magicHand[i].getSuit()) == 0){
                 if (playerCard.getValue() == magicHand[i].getValue()){
                   System.out.println("Your card was in the Deck! Magic!");
+                } else {
+                    System.out.println("your card was not in the deck");
                 }
-            } else if (i == 7){ System.out.println("your card was not in the deck");
+            } else if (i == 7){
+                System.out.println("your card was not in the deck");
             }
     } 
  }
