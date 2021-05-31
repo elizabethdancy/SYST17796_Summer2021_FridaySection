@@ -103,3 +103,13 @@ public class CardTrick {
     }
 
 }
+
+/**
+ * TEST RUN
+ * 
+ * Lucky card is:
+ * Suit: Hearts 
+ * Value: 1
+ * 
+ * Incorrect!BUILD SUCCESSFUL (total time: 1 second)
+ */
