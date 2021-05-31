@@ -51,7 +51,6 @@ public class CardTrick {
                 System.out.println("Congrats! Your card matched");
             else
            System.out.println("oops! card not matched");
- 
 	 Card luckyCard = new Card();
         luckyCard.setValue(6);
         luckyCard.setSuit(Card.SUITS[3]);
