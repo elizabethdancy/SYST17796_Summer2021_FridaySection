@@ -32,6 +32,7 @@ public class CardTrick {
         }
 
         //insert code to ask the user for Card value and suit, create their card
+        /*
         Scanner input = new Scanner(System.in);
         System.out.println("\nPick a card!\n");
 
@@ -57,7 +58,14 @@ public class CardTrick {
         } else {
             throw new IllegalArgumentException("suitGuess " + intSuitGuess + "is out of range! (1-4)");
         }
-
+        */
+        
+        Card luckyCard = new Card(1, 1);
+        String suitGuess = luckyCard.getSuit();
+        int valueGuess = luckyCard.getValue();
+        
+        System.out.println("Lucky card is:");
+        System.out.println(luckyCard.toString());
         // and search magicHand here
         String cardSuit;
         int cardValue;
